@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,106 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dev_profile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="annie-spratt-210740-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="DjR-DL-mfm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ugI-JT-Jur"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="vBq-86-yhn">
+                                <rect key="frame" x="16" y="120" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HTh-GM-ewB"/>
+                                    <constraint firstAttribute="width" constant="100" id="qEg-Hk-pBm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FlowerShop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-6U-b01">
+                                <rect key="frame" x="132" y="155" width="119.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="gIm-ri-Igu">
+                                <rect key="frame" x="61" y="240" width="253" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1a7-3H-1IV">
+                                        <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="TmZ-q6-QyU"/>
+                                            <constraint firstAttribute="height" constant="65" id="gyl-9w-rAO"/>
+                                        </constraints>
+                                        <state key="normal" image="photo-camera-filled-symbol-of-the-tool-in-circular-button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMr-T0-e9E">
+                                        <rect key="frame" x="94" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="2V5-bq-GfZ"/>
+                                            <constraint firstAttribute="height" constant="65" id="Yu3-nn-1sk"/>
+                                        </constraints>
+                                        <state key="normal" image="favorite-star-circular-interface-button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3n-AE-kJm">
+                                        <rect key="frame" x="188" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="Nj3-lM-job"/>
+                                            <constraint firstAttribute="height" constant="65" id="ebu-Tg-svd"/>
+                                        </constraints>
+                                        <state key="normal" image="photo-camera-filled-symbol-of-the-tool-in-circular-button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-xL-eNH">
+                                <rect key="frame" x="26" y="323" width="323" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="annie-spratt-298421-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="reW-d1-EcQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="reW-d1-EcQ" secondAttribute="height" multiplier="1:1" id="aJB-om-bcu"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="xLg-Lh-qGN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sebastian-molina-fotografia-101308-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="8R0-8Z-Qwc">
+                                        <rect key="frame" x="183" y="0.0" width="140" height="140"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Q9-NM-Fwh"/>
+                            <constraint firstItem="Jih-6U-b01" firstAttribute="centerY" secondItem="vBq-86-yhn" secondAttribute="centerY" id="1bB-mY-f6u"/>
+                            <constraint firstItem="ISJ-xL-eNH" firstAttribute="top" secondItem="gIm-ri-Igu" secondAttribute="bottom" constant="18" id="4Yg-HO-utQ"/>
+                            <constraint firstItem="gIm-ri-Igu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4i7-dW-AgP"/>
+                            <constraint firstItem="vBq-86-yhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KUl-SJ-RA5"/>
+                            <constraint firstItem="gIm-ri-Igu" firstAttribute="top" secondItem="vBq-86-yhn" secondAttribute="bottom" constant="20" id="NSO-u2-Vwl"/>
+                            <constraint firstItem="vBq-86-yhn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Wdn-Do-Qpx"/>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XCj-L0-9ll"/>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YhG-zJ-Tdw"/>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2N-GI-25C"/>
+                            <constraint firstItem="Jih-6U-b01" firstAttribute="leading" secondItem="vBq-86-yhn" secondAttribute="trailing" constant="16" id="h5a-H6-Y84"/>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uTC-B8-RdK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ISJ-xL-eNH" secondAttribute="trailing" constant="26" id="uWB-Mn-Oms"/>
+                            <constraint firstItem="DjR-DL-mfm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w3f-B8-8ze"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="annie-spratt-210740-unsplash" width="1454" height="2185"/>
+        <image name="annie-spratt-298421-unsplash" width="1632" height="2250"/>
+        <image name="favorite-star-circular-interface-button" width="256" height="256"/>
+        <image name="photo-camera-filled-symbol-of-the-tool-in-circular-button" width="256" height="256"/>
+        <image name="rose" width="512" height="512"/>
+        <image name="sebastian-molina-fotografia-101308-unsplash" width="2728" height="1816"/>
+    </resources>
 </document>
